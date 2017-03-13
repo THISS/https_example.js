@@ -7,7 +7,10 @@ let options = {
 };
 
 //  Create a callback to use once the request is made
-let cb = () => {console.log('In response handler callback')};
+let cb = (response) => {
+  console.log('In response handler callback');
+  console.log('Response:', response);
+};
 
 console.log("I'm about to make the request!");
 
