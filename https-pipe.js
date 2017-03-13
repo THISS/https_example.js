@@ -1,4 +1,17 @@
 // Import the https module into this file so we can use it
 let https = require('https');
 
-console.log('I did it!');
+let options = {
+  host: 'www.example.org',
+  path:'/'
+};
+
+//  Create a callback to use once the request is made
+let cb = () => {console.log('In response handler callback')};
+
+console.log("I'm about to make the request!");
+
+// Make the request
+https.request(options, cb).end();
+
+console.log('I\'ve made the request');
