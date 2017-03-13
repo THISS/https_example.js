@@ -2,8 +2,8 @@
 let https = require('https');
 
 let options = {
-  host: 'www.example.org',
-  path: '/'
+  host: 'stream-large-file.herokuapp.com',
+  path: '/give-me-stuff-now'
 };
 
 //  Create a callback to use once the request is made
@@ -14,7 +14,7 @@ let cb = (response) => {
     console.log('[-- CHUNK OF LENGTH ' + chunk.length + ' --]');
     console.log(chunk.toString());
   });
-  console.log('Response:', response);
+  // console.log('Response:', response);
 };
 
 
